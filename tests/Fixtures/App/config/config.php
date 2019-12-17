@@ -13,5 +13,8 @@ declare(strict_types=1);
 
 $container->setParameter('cmf_testing.bundle_fqn', 'Sonata\DoctrinePHPCRAdminBundle');
 $loader->import(CMF_TEST_CONFIG_DIR.'/default.php');
+$container->loadFromExtension('framework', [
+    'fragments' => ['enabled' => true],
+]);
 $loader->import(__DIR__.'/sonata_phpcr_admin.yml');
 $loader->import(CMF_TEST_CONFIG_DIR.'/phpcr_odm.php');

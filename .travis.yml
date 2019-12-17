@@ -6,6 +6,7 @@ branches:
   only:
     - master
     - 2.x
+    - testing_func
 
 language: php
 
